@@ -28,15 +28,7 @@ public class Main {
 
         GameEngine engine = GameEngine.getInstance();
 
-        if (args.length == 1) {
-            argsLength = 1;
-            int rounds = Integer.parseInt(args[0]);
-            engine.startSimulation(rounds);
-        } else if (args.length == 2 && args[0].intern().equals("all")) {
-            argsLength = 2;
-            Properties.EMOTION_RESET = getResetInfo(args[1].intern());
-            engine.startSimulation();
-        } else if (args.length == 5) {
+        if (args.length == 5) {
             argsLength = 5;
             allPlayerTypes = new ArrayList<Integer>();
             int player1 = convertToType(args[0].intern());
@@ -57,7 +49,7 @@ public class Main {
             int player3 = convertToType(args[2].intern());
             int player4 = convertToType(args[3].intern());
             Properties.EMOTION_RESET = getResetInfo(args[4].intern());
-            Properties.FILE_PATH_WINDOWS = args[5].intern();
+            Properties.FILE_PATH = args[5].intern();
             allPlayerTypes.add(player1);
             allPlayerTypes.add(player2);
             allPlayerTypes.add(player3);
@@ -65,7 +57,7 @@ public class Main {
             engine.startSimulation(true);
         } else {
             throw new RuntimeException(
-                    "Invalid amount of parameters, number must be 0, 1 or 5.");
+                    "Invalid number of parameters, number must be 5 or 6.");
         }
     }
 

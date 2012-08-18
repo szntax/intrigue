@@ -12,15 +12,10 @@ public class Properties {
     public static boolean EMOTION_RESET = false;
 
     /**
-     * Path where csv Files will be saved on windows machine.
+     * Path where csv Files will be saved.
      */
-    public static String FILE_PATH_WINDOWS = "c:/";
+    public static String FILE_PATH = "c:/";
 
-    /**
-     * Path where csv Files will be saved on non mac machine.
-     * PLEASE CHANGE THIS FOLDER TO A PATH WHERE YOU HAVE WRITE ACCESS.
-     */
-    public static String FILE_PATH_OTHER = "/Users";
 
     /**
      * Calibration Value
@@ -78,13 +73,13 @@ public class Properties {
         String logFile3;
         String logFile4;
 
-        logFile1 = FILE_PATH_OTHER + "/c-" + getString();
+        logFile1 = FILE_PATH + "/c-" + getString();
 
-        logFile2 = FILE_PATH_OTHER + "/e-" + getString();
+        logFile2 = FILE_PATH + "/e-" + getString();
 
-        logFile3 = FILE_PATH_OTHER + "/x-" + getString();
+        logFile3 = FILE_PATH + "/x-" + getString();
 
-        logFile4 = FILE_PATH_OTHER + "/s-" + getString();
+        logFile4 = FILE_PATH + "/s-" + getString();
 
         allFileNames.add(logFile1);
         allFileNames.add(logFile2);

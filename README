@@ -1,0 +1,7 @@
+Simulation for the board game.
+
+specify 5 or six parameters using the player type (0 - 11)
+the possible emotional reset (no,yes)
+and optionally another statistics log directory (default is "C:/" so be aware)
+
+HumanPlayer has the type 11.
